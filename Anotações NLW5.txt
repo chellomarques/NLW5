@@ -22,3 +22,8 @@ http://localhost:3333
 
 ## para testar metodos POST
 instalar aplicação 'insomnia'
+
+## Instalando Banco de Dados
+instalar knexjs (knexjs.org)
+OU
+usar framework typeorm (typeorm.io) ou sequelize

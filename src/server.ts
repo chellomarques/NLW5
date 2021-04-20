@@ -1,22 +1,8 @@
 import express, { response } from "express"
+import "./database"
+import { routes } from "./routes"
 
-const app = express();
-/**
- * POST
- * PUT
- * GET
- * DELETE
- * PATCH
- */
-
-app.get("/", (request, response ) => {
-  return response.json({
-    message: "Olá, você está no mer server!",
-  })
-})
-
-app.post("/", (request, response) => {
-  return response.json({ message: "Usuário salvo com sucesso!",})
-})
-
+const app = express()
+app.use(express.json())
+app.use(routes)
 app.listen(3333, () => console.log('Server is running on port 3333'))
